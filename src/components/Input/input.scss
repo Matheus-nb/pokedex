@@ -1,0 +1,44 @@
+@import '../../styles/colors/basic.scss';
+
+.input__container {
+  
+  background: $forms-background;
+  color: #666360;
+  border-radius: 10px;
+  border: 2px solid $forms-background;
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  & + div {
+    margin-left: 1rem;
+  }
+
+  .input__label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #666360;
+    margin-right: 8px;
+  }
+  
+  .input__input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    color: $forms-color;
+  
+    &::placeholder{
+      color: #666360;
+    }
+  }
+  
+  .input__error {
+    margin-left: 8px;
+    color: #c53030;
+  }
+
+}
+

@@ -1,0 +1,32 @@
+@import '../../styles/colors/basic.scss';
+
+
+.header__content {
+
+  .header__nav {
+
+    a {
+  
+      &.header__nav--active {
+  
+        color: $white;
+        font-weight: bold;
+  
+        &::after {
+          content: "";
+          height: 3px;
+          border-radius: 3px 3px 0;
+          width: 100%;
+          position: absolute;
+          bottom: 1px;
+          left: 0;
+          background: $yellow-red;
+        }
+  
+      }
+  
+    }
+  
+  }
+  
+}
