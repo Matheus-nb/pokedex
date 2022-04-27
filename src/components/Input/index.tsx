@@ -28,7 +28,7 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({
       {!!label && <label className='input__label' htmlFor={name}>{label}</label>}
 
       <input
-        className='input__input'
+        className='input__content'
         name={name}
         id={name}
         ref={ref}

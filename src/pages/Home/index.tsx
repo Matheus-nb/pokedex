@@ -16,7 +16,7 @@ export function Home() {
           <p>Quer achar seu pokemon favorito ??</p>
           <p>Quer poder saber os status de cada Pokemon ??</p>
           <p>Bem vindo ao Pokédex, e sinta-se livra para ser um verdadeiro <strong>TREINADOR POKEMON</strong></p>
-          
+
         </div>
 
 
@@ -28,7 +28,7 @@ export function Home() {
         </div>
 
       </div>
-      
+
     </>
   )
 }

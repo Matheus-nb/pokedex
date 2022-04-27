@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { BrowserRouter } from "react-router-dom";
 
 import { PokemonDocker } from '../components/PokemonDocker';
 
@@ -22,12 +21,6 @@ PokeDocker.args = {
   type: 'Grass',
   height: 7,
   weight: 69,
-  hp: 'HP',
-  attack: 'Attack',
-  defense: 'Defense',
-  spAtk: 'Sp. Atk',
-  spDef: 'Sp. Def',
-  speed: 'Speed',
   hpValue: 45,
   attackValue: 49,
   defenseValue: 49,

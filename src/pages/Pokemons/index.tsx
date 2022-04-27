@@ -10,12 +10,6 @@ type PokemonProps = {
   type: string;
   height: number;
   weight: number;
-  hp: string;
-  attack: string;
-  defense: string;
-  spAtk: string;
-  spDef: string;
-  speed: string;
   hpValue: number;
   attackValue: number;
   defenseValue: number;
@@ -23,8 +17,6 @@ type PokemonProps = {
   spDefValue: number;
   speedValue: number;
 }
-
-
 
 export function Pokemons() {
 
@@ -48,12 +40,6 @@ export function Pokemons() {
         type: data.types[0].type.name,
         height: data.height,
         weight: data.weight,
-        hp: data.stats[0].stat.name,
-        attack: data.stats[1].stat.name,
-        defense: data.stats[2].stat.name,
-        spAtk: data.stats[3].stat.name,
-        spDef: data.stats[4].stat.name,
-        speed: data.stats[5].stat.name,
         hpValue: data.stats[0].base_stat,
         attackValue: data.stats[1].base_stat,
         defenseValue: data.stats[2].base_stat,
@@ -63,7 +49,7 @@ export function Pokemons() {
       }
 
 
-      setAllPokemons(currentList => [...currentList, pokemonData])
+      setAllPokemons(currentList => [...currentList, pokemonData].sort((a, b) => (a.id < b.id) ? -1 : 1))
     })
   }
 

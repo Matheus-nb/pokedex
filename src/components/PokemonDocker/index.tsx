@@ -9,12 +9,6 @@ interface IPokemonProps {
   type: string;
   height: number;
   weight: number;
-  hp: string;
-  attack: string;
-  defense: string;
-  spAtk: string;
-  spDef: string;
-  speed: string;
   hpValue: number;
   attackValue: number;
   defenseValue: number;
@@ -24,51 +18,32 @@ interface IPokemonProps {
 }
 
 
-
 /**
 * Componente docker dos status de cada pokemon, para o mesmo se utiliza do pokeDescription.
 */
 
-export function PokemonDocker({ id, name, image, type, height, weight, hp, attack, defense, spAtk, spDef, speed, hpValue, attackValue, defenseValue,
-  spAtkValue, spDefValue, speedValue }: IPokemonProps) {
+export function PokemonDocker(Pokemon: IPokemonProps) {
   const [show, setShow] = useState(false)
 
   return (
     <div className="docker__pokemon">
 
       <div className="pokemon__number">
-        <small>#0{id}</small>
+        <small>#0{Pokemon.id}</small>
       </div>
 
-      <img src={image} alt={name} />
+      <img src={Pokemon.image} alt={Pokemon.name} />
 
       <div className="pokemon__details">
 
-        <h3>{name.toUpperCase()}</h3>
+        <h3>{Pokemon.name.toUpperCase()}</h3>
 
-        <small>Type : {type}</small>
+        <small>Type : {Pokemon.type}</small>
 
         <button className="pokemon__button--showStatus" onClick={() => setShow(!show)}>{show === true ? "Less" : "More"}</button>
 
         {
-          show === true ?
-            <PokemonDescription
-              weight={weight}
-              height={height}
-              hp={hp}
-              attack={attack}
-              defense={defense}
-              spAtk={spAtk}
-              spDef={spDef}
-              speed={speed}
-
-              hpValue={hpValue}
-              attackValue={attackValue}
-              defenseValue={defenseValue}
-              spAtkValue={spAtkValue}
-              spDefValue={spDefValue}
-              speedValue={speedValue}
-            /> : <></>
+          show === true ? <PokemonDescription {...Pokemon} /> : <></>
         }
 
       </div>

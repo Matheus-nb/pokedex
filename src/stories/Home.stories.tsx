@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { within, userEvent } from '@storybook/testing-library';
 import { Home } from '../pages/Home';
 import { BrowserRouter } from "react-router-dom";
 
@@ -14,9 +13,9 @@ export default {
 
 const Template: ComponentStory<typeof Home> = (ags) =>
 (
-    <BrowserRouter>
-      <Home />
-    </BrowserRouter>
+  <BrowserRouter>
+    <Home />
+  </BrowserRouter>
 );
 
 export const Inicio = Template.bind({});

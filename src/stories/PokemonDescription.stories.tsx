@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { BrowserRouter } from "react-router-dom";
 
 import { PokemonDescription } from '../components/PokemonDescription';
 
@@ -18,12 +17,6 @@ export const PokeDescription = Template.bind({});
 PokeDescription.args = {
   height: 80,
   weight: 96,
-  hp: 'HP',
-  attack: 'Attack',
-  defense: 'Defense',
-  spAtk: 'Sp. Atk',
-  spDef: 'Sp. Def',
-  speed: 'Speed',
   hpValue: 37,
   attackValue: 39,
   defenseValue: 54,

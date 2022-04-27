@@ -22,7 +22,7 @@ const schema = yup.object({
   email: yup.string().email('E-mail inválido').required('E-mail obrigatório'),
   phone: yup.string().matches(PhoneRegex, 'Numero de telefone inválido').required('Telefone obrigatório'),
   about: yup.string().required('Assunto obrigatório'),
-  message: yup.string().required('Explique o seu contato')
+  message: yup.string()
 }).required();
 
 export function Contact() {

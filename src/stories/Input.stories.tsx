@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { BrowserRouter } from "react-router-dom";
 
 import { Input } from '../components/Input';
 

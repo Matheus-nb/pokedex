@@ -24,11 +24,12 @@
     margin-right: 8px;
   }
   
-  .input__input {
+  .input__content {
     flex: 1;
     background: transparent;
     border: 0;
     color: $forms-color;
+    outline: none;
   
     &::placeholder{
       color: #666360;
